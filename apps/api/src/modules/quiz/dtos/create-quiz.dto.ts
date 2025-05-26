@@ -17,6 +17,11 @@ export class CreateQuizDto {
   @IsNotEmpty()
   lessonId: number;
 
+  @ApiProperty({ description: 'ID på brugeren, der opretter quizzen' })
+  @IsInt()
+  @IsNotEmpty()
+  userId: number;
+
   @ApiProperty({ description: 'Liste af spørgsmål-IDer inkluderet i quizzen', required: false })
   @IsArray()
   @IsInt({ each: true })

@@ -2,19 +2,25 @@
 
 > **Statusoversigt (maj 2024):**
 >
-> **Færdige moduler:**
+> **Fuldt implementerede moduler:**
+> - AuthModule (JWT-baseret auth, login/register endpoints)
 > - WordsModule (CRUD, validering, Swagger, Prisma)
 > - VerseModule (CRUD, validering, Swagger, Prisma)
 > - LessonModule (CRUD, progression, Swagger, Prisma)
-> - QuizModule (CRUD, quizlogik, scoring, Swagger, Prisma)
+> - PrismaModule (Global database service provider)
+>
+> **Delvist implementerede moduler:**
+> - QuizModule (Grundlæggende struktur, mangler fuld CRUD implementation)
+>
+> **Tomme moduler (kun struktur oprettet, ingen CRUD, controller, service eller DTOs):**
+> - FlashcardModule
+> - GrammarModule
+> - PronunciationModule
+> - ProgressModule
+> - SettingsModule
 >
 > **Mangler:**
 > - UserModule (CRUD, profil, indstillinger)
-> - FlashcardModule (CRUD, spaced repetition, statistik)
-> - GrammarModule (CRUD, grammatiske regler, eksempler)
-> - PronunciationModule (CRUD, lydfiler, feedback)
-> - ProgressModule (CRUD, tracking, rapportering)
-> - SettingsModule (CRUD, brugerpræferencer)
 >
 > **Frontend:**
 > - Sider for flere moduler findes, men integration og UI/UX optimering mangler for nye features.
@@ -26,12 +32,13 @@
 > - Swagger delvist opsat. Øvrig dokumentation og vedligehold mangler.
 >
 > **Næste skridt (prioriteret):**
-> 1. Implementér manglende backend-moduler (User, Flashcard, Grammar, Pronunciation, Progress, Settings)
-> 2. Udvid frontend med sider og integration for de nye moduler
-> 3. Implementér AI-feedback og adaptiv progression
-> 4. Forbedr testdækning og optimer performance
-> 5. Opsæt CI/CD og deployment
-> 6. Færdiggør dokumentation og brugervejledninger
+> 1. Implementér CRUD, DTOs og endpoints for Flashcard, Grammar, Pronunciation, Progress, Settings
+> 2. Implementér manglende backend-modul for User
+> 3. Udvid frontend med sider og integration for de nye moduler
+> 4. Implementér AI-feedback og adaptiv progression
+> 5. Forbedr testdækning og optimer performance
+> 6. Opsæt CI/CD og deployment
+> 7. Færdiggør dokumentation og brugervejledninger
 
 Dette dokument beskriver en detaljeret, flerfaset plan for udviklingen af REST API'en til Quranic Arabic Trainer platformen. Planen tager udgangspunkt i den specificerede monorepo-struktur med NestJS, Prisma og PostgreSQL.
 

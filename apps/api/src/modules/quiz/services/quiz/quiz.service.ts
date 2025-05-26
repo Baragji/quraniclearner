@@ -1,8 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from '../../../prisma/prisma.service';
-import { CreateQuizDto } from '../dtos/create-quiz.dto';
-import { UpdateQuizDto } from '../dtos/update-quiz.dto';
-import { Quiz } from '@prisma/client';
+import { CreateQuizDto, UpdateQuizDto } from '../../dtos/quiz.dtos';
+import { Quiz } from 'apps/api/generated/prisma';
 
 @Injectable()
 export class QuizService {

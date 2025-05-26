@@ -1,8 +1,8 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, ParseIntPipe, NotFoundException } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, Delete, Put, ParseIntPipe, NotFoundException, Patch } from '@nestjs/common';
+import { ApiTags, ApiOperation, ApiResponse, ApiParam, ApiBody } from '@nestjs/swagger';
 import { QuizService } from '../../services/quiz/quiz.service';
 import { CreateQuizDto, UpdateQuizDto } from '../../dtos/quiz.dtos';
-import { ApiTags, ApiOperation, ApiResponse, ApiBody, ApiParam } from '@nestjs/swagger';
-import { Quiz } from '@prisma/client';
+import { Quiz } from 'apps/api/generated/prisma';
 
 @ApiTags('quizzes')
 @Controller('quizzes')
