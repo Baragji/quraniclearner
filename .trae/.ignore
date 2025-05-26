@@ -1,0 +1,20 @@
+.next/**` (Next.js build output) 
+apps/api/dist/**` (NestJS buil
+apps/api/gitignore` 
+apps/api/.git/**` (Git-specifikke filer) 
+public/**`  
+node_modules/**`
+*.sqlite`
+.log` (Logfiler)
+pnpm-lock.yaml` (Lock fil)
+out/** (Next.js static export output)
+build/** (General build output)
+.env* (Environment variables)
+.vercel/** (Vercel deployment files)
+*.tsbuildinfo (TypeScript build cache)
+Struktur.txt (Structure document)
+overblik.txt (Overview document)
+repomix-output.xml (Repomix output)
+fejl.txt (Error log/notes - consider if needed for debugging context)
+apps/api/generated/** (Auto-generated API client/files)
+ 

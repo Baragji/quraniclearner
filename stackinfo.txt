@@ -1,0 +1,24 @@
+# Quranic Arabic Trainer - Teknologistak
+
+## Frontend (`/apps/web` - Eksisterende)
+- **Framework:** Next.js (React 18)
+- **Sprog:** TypeScript
+- **Styling:** Tailwind CSS
+- **UI Komponenter:** shadcn/ui
+- **Package Manager:** PNPM
+- **PWA:** Ja (manifest.ts, sw.ts)
+- **Offline funktionalitet:** Ja (lib/offline-storage.ts)
+- **Performance Monitorering:** Ja (lib/performance-monitoring.ts)
+
+## Backend (`/apps/api` - Planlagt)
+- **Framework:** NestJS v10.3.10
+- **Sprog:** TypeScript v5.3.3
+- **ORM:** Prisma v6.8.2
+- **Database:** PostgreSQL v15
+- **API Dokumentation:** Swagger (OpenAPI)
+- **Package Manager:** PNPM (forventes i monorepo-setup)
+
+## Generelt
+- **Monorepo:** Ja (forventes med PNPM workspaces)
+- **Versionering:** Git
+- **Primær Udviklings-IDE:** Trae AI

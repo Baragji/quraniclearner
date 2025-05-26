@@ -1,0 +1,962 @@
+
+```
+quranic-arabic-trainer-2
+├─ app
+│  ├─ admin
+│  │  └─ page.tsx
+│  ├─ advanced-progression
+│  │  └─ page.tsx
+│  ├─ ai-feedback
+│  │  └─ page.tsx
+│  ├─ alphabet
+│  │  └─ page.tsx
+│  ├─ auth
+│  │  ├─ login
+│  │  │  └─ page.tsx
+│  │  └─ register
+│  │     └─ page.tsx
+│  ├─ community
+│  │  ├─ loading.tsx
+│  │  └─ page.tsx
+│  ├─ globals.css
+│  ├─ grammar
+│  │  └─ page.tsx
+│  ├─ kurser
+│  │  └─ [kursusId]
+│  │     └─ [fagId]
+│  │        └─ [emneId]
+│  │           └─ page.tsx
+│  ├─ layout.tsx
+│  ├─ learn
+│  │  └─ vocabulary
+│  │     └─ page.tsx
+│  ├─ loading.tsx
+│  ├─ manifest.ts
+│  ├─ offline
+│  │  ├─ error.tsx
+│  │  ├─ loading.tsx
+│  │  └─ page.tsx
+│  ├─ page.tsx
+│  ├─ performance
+│  │  └─ page.tsx
+│  ├─ practice
+│  │  └─ quiz
+│  │     └─ page.tsx
+│  ├─ profile
+│  │  └─ page.tsx
+│  ├─ pronunciation
+│  │  └─ page.tsx
+│  ├─ quiz
+│  │  └─ page.tsx
+│  ├─ quiz-system
+│  │  └─ page.tsx
+│  ├─ quran
+│  │  ├─ advanced-study
+│  │  │  ├─ loading.tsx
+│  │  │  └─ page.tsx
+│  │  ├─ loading.tsx
+│  │  ├─ page.tsx
+│  │  └─ study
+│  │     └─ [surahId]
+│  │        ├─ error.tsx
+│  │        ├─ loading.tsx
+│  │        └─ page.tsx
+│  ├─ settings
+│  │  ├─ error.tsx
+│  │  ├─ loading.tsx
+│  │  └─ page.tsx
+│  ├─ sw.ts
+│  └─ vocabulary
+│     └─ flashcards
+│        └─ page.tsx
+├─ components
+│  ├─ admin-analytics-chart.tsx
+│  ├─ admin-error-heatmap.tsx
+│  ├─ ai-explain-overlay.tsx
+│  ├─ ai-insight-card.tsx
+│  ├─ command-menu.tsx
+│  ├─ course-card.tsx
+│  ├─ flashcard-stats.tsx
+│  ├─ glassmorphism-header.tsx
+│  ├─ level-progress-ring.tsx
+│  ├─ main-nav.tsx
+│  ├─ notification-popup.tsx
+│  ├─ performance
+│  │  ├─ code-splitting-example.tsx
+│  │  ├─ lazy-loaded-component.tsx
+│  │  ├─ optimized-image.tsx
+│  │  ├─ performance-metrics.tsx
+│  │  └─ resource-monitor.tsx
+│  ├─ progress-ring.tsx
+│  ├─ progress.tsx
+│  ├─ quran-word-analysis.tsx
+│  ├─ recent-activity-card.tsx
+│  ├─ theme-provider.tsx
+│  ├─ topic-discussion-thread.tsx
+│  ├─ ui
+│  │  ├─ accordion.tsx
+│  │  ├─ alert-dialog.tsx
+│  │  ├─ alert.tsx
+│  │  ├─ aspect-ratio.tsx
+│  │  ├─ avatar.tsx
+│  │  ├─ badge.tsx
+│  │  ├─ breadcrumb.tsx
+│  │  ├─ button.tsx
+│  │  ├─ calendar.tsx
+│  │  ├─ card.tsx
+│  │  ├─ carousel.tsx
+│  │  ├─ chart.tsx
+│  │  ├─ checkbox.tsx
+│  │  ├─ collapsible.tsx
+│  │  ├─ command.tsx
+│  │  ├─ context-menu.tsx
+│  │  ├─ dialog.tsx
+│  │  ├─ drawer.tsx
+│  │  ├─ dropdown-menu.tsx
+│  │  ├─ form.tsx
+│  │  ├─ hover-card.tsx
+│  │  ├─ input-otp.tsx
+│  │  ├─ input.tsx
+│  │  ├─ label.tsx
+│  │  ├─ menubar.tsx
+│  │  ├─ navigation-menu.tsx
+│  │  ├─ pagination.tsx
+│  │  ├─ popover.tsx
+│  │  ├─ progress.tsx
+│  │  ├─ radio-group.tsx
+│  │  ├─ resizable.tsx
+│  │  ├─ scroll-area.tsx
+│  │  ├─ select.tsx
+│  │  ├─ separator.tsx
+│  │  ├─ sheet.tsx
+│  │  ├─ sidebar.tsx
+│  │  ├─ skeleton.tsx
+│  │  ├─ slider.tsx
+│  │  ├─ sonner.tsx
+│  │  ├─ switch.tsx
+│  │  ├─ table.tsx
+│  │  ├─ tabs.tsx
+│  │  ├─ textarea.tsx
+│  │  ├─ toast.tsx
+│  │  ├─ toaster.tsx
+│  │  ├─ toggle-group.tsx
+│  │  ├─ toggle.tsx
+│  │  ├─ tooltip.tsx
+│  │  ├─ use-mobile.tsx
+│  │  └─ use-toast.ts
+│  └─ user-nav.tsx
+├─ components.json
+├─ hooks
+│  ├─ use-mobile.tsx
+│  ├─ use-performance.ts
+│  └─ use-toast.ts
+├─ lib
+│  ├─ offline-storage.ts
+│  ├─ performance-monitoring.ts
+│  └─ utils.ts
+├─ next.config.mjs
+├─ package.json
+├─ pnpm-lock.yaml
+├─ postcss.config.mjs
+├─ public
+│  ├─ placeholder-logo.png
+│  ├─ placeholder-logo.svg
+│  ├─ placeholder-user.jpg
+│  ├─ placeholder.jpg
+│  └─ placeholder.svg
+├─ repomix-output.xml
+├─ styles
+│  └─ globals.css
+├─ tailwind.config.js
+└─ tsconfig.json
+
+```
+```
+quranic-arabic-trainer-2
+├─ .next
+│  ├─ app-build-manifest.json
+│  ├─ build-manifest.json
+│  ├─ cache
+│  │  ├─ .rscinfo
+│  │  ├─ swc
+│  │  │  └─ plugins
+│  │  │     └─ v7_macos_aarch64_8.0.0
+│  │  └─ webpack
+│  │     ├─ client-development
+│  │     │  ├─ 0.pack.gz
+│  │     │  ├─ 1.pack.gz
+│  │     │  ├─ 10.pack.gz
+│  │     │  ├─ 2.pack.gz
+│  │     │  ├─ 3.pack.gz
+│  │     │  ├─ 4.pack.gz
+│  │     │  ├─ 5.pack.gz
+│  │     │  ├─ 6.pack.gz
+│  │     │  ├─ 7.pack.gz
+│  │     │  ├─ 8.pack.gz
+│  │     │  ├─ 9.pack.gz
+│  │     │  ├─ index.pack.gz
+│  │     │  └─ index.pack.gz.old
+│  │     ├─ client-development-fallback
+│  │     │  ├─ 0.pack.gz
+│  │     │  └─ index.pack.gz
+│  │     └─ server-development
+│  │        ├─ 0.pack.gz
+│  │        ├─ 1.pack.gz
+│  │        ├─ 2.pack.gz
+│  │        ├─ 3.pack.gz
+│  │        ├─ 4.pack.gz
+│  │        ├─ 5.pack.gz
+│  │        ├─ 6.pack.gz
+│  │        ├─ 7.pack.gz
+│  │        ├─ 8.pack.gz
+│  │        ├─ index.pack.gz
+│  │        └─ index.pack.gz.old
+│  ├─ fallback-build-manifest.json
+│  ├─ package.json
+│  ├─ react-loadable-manifest.json
+│  ├─ server
+│  │  ├─ app
+│  │  │  └─ _not-found
+│  │  │     └─ page_client-reference-manifest.js
+│  │  ├─ app-paths-manifest.json
+│  │  ├─ interception-route-rewrite-manifest.js
+│  │  ├─ middleware-build-manifest.js
+│  │  ├─ middleware-manifest.json
+│  │  ├─ middleware-react-loadable-manifest.js
+│  │  ├─ next-font-manifest.js
+│  │  ├─ next-font-manifest.json
+│  │  ├─ pages-manifest.json
+│  │  ├─ server-reference-manifest.js
+│  │  └─ server-reference-manifest.json
+│  ├─ static
+│  │  ├─ chunks
+│  │  │  ├─ app
+│  │  │  │  └─ _not-found
+│  │  │  │     └─ page.js
+│  │  │  ├─ fallback
+│  │  │  │  ├─ amp.js
+│  │  │  │  ├─ main-app.js
+│  │  │  │  ├─ main.js
+│  │  │  │  ├─ pages
+│  │  │  │  │  ├─ _app.js
+│  │  │  │  │  └─ _error.js
+│  │  │  │  ├─ react-refresh.js
+│  │  │  │  └─ webpack.js
+│  │  │  ├─ main-app.js
+│  │  │  ├─ polyfills.js
+│  │  │  └─ webpack.js
+│  │  ├─ development
+│  │  │  ├─ _buildManifest.js
+│  │  │  └─ _ssgManifest.js
+│  │  └─ webpack
+│  │     └─ 633457081244afec._.hot-update.json
+│  ├─ trace
+│  └─ types
+│     ├─ cache-life.d.ts
+│     └─ package.json
+├─ Struktur.txt
+├─ app
+│  ├─ admin
+│  │  └─ page.tsx
+│  ├─ advanced-progression
+│  │  └─ page.tsx
+│  ├─ ai-feedback
+│  │  └─ page.tsx
+│  ├─ alphabet
+│  │  └─ page.tsx
+│  ├─ auth
+│  │  ├─ login
+│  │  │  └─ page.tsx
+│  │  └─ register
+│  │     └─ page.tsx
+│  ├─ community
+│  │  ├─ loading.tsx
+│  │  └─ page.tsx
+│  ├─ globals.css
+│  ├─ grammar
+│  │  └─ page.tsx
+│  ├─ kurser
+│  │  └─ [kursusId]
+│  │     └─ [fagId]
+│  │        └─ [emneId]
+│  │           └─ page.tsx
+│  ├─ layout.tsx
+│  ├─ learn
+│  │  └─ vocabulary
+│  │     └─ page.tsx
+│  ├─ loading.tsx
+│  ├─ manifest.ts
+│  ├─ offline
+│  │  ├─ error.tsx
+│  │  ├─ loading.tsx
+│  │  └─ page.tsx
+│  ├─ page.tsx
+│  ├─ performance
+│  │  └─ page.tsx
+│  ├─ practice
+│  │  └─ quiz
+│  │     └─ page.tsx
+│  ├─ profile
+│  │  └─ page.tsx
+│  ├─ pronunciation
+│  │  └─ page.tsx
+│  ├─ quiz
+│  │  └─ page.tsx
+│  ├─ quiz-system
+│  │  └─ page.tsx
+│  ├─ quran
+│  │  ├─ advanced-study
+│  │  │  ├─ loading.tsx
+│  │  │  └─ page.tsx
+│  │  ├─ loading.tsx
+│  │  ├─ page.tsx
+│  │  └─ study
+│  │     └─ [surahId]
+│  │        ├─ error.tsx
+│  │        ├─ loading.tsx
+│  │        └─ page.tsx
+│  ├─ settings
+│  │  ├─ error.tsx
+│  │  ├─ loading.tsx
+│  │  └─ page.tsx
+│  ├─ sw.ts
+│  └─ vocabulary
+│     └─ flashcards
+│        └─ page.tsx
+├─ components
+│  ├─ admin-analytics-chart.tsx
+│  ├─ admin-error-heatmap.tsx
+│  ├─ ai-explain-overlay.tsx
+│  ├─ ai-insight-card.tsx
+│  ├─ command-menu.tsx
+│  ├─ course-card.tsx
+│  ├─ flashcard-stats.tsx
+│  ├─ glassmorphism-header.tsx
+│  ├─ level-progress-ring.tsx
+│  ├─ main-nav.tsx
+│  ├─ notification-popup.tsx
+│  ├─ performance
+│  │  ├─ code-splitting-example.tsx
+│  │  ├─ lazy-loaded-component.tsx
+│  │  ├─ optimized-image.tsx
+│  │  ├─ performance-metrics.tsx
+│  │  └─ resource-monitor.tsx
+│  ├─ progress-ring.tsx
+│  ├─ progress.tsx
+│  ├─ quran-word-analysis.tsx
+│  ├─ recent-activity-card.tsx
+│  ├─ theme-provider.tsx
+│  ├─ topic-discussion-thread.tsx
+│  ├─ ui
+│  │  ├─ accordion.tsx
+│  │  ├─ alert-dialog.tsx
+│  │  ├─ alert.tsx
+│  │  ├─ aspect-ratio.tsx
+│  │  ├─ avatar.tsx
+│  │  ├─ badge.tsx
+│  │  ├─ breadcrumb.tsx
+│  │  ├─ button.tsx
+│  │  ├─ calendar.tsx
+│  │  ├─ card.tsx
+│  │  ├─ carousel.tsx
+│  │  ├─ chart.tsx
+│  │  ├─ checkbox.tsx
+│  │  ├─ collapsible.tsx
+│  │  ├─ command.tsx
+│  │  ├─ context-menu.tsx
+│  │  ├─ dialog.tsx
+│  │  ├─ drawer.tsx
+│  │  ├─ dropdown-menu.tsx
+│  │  ├─ form.tsx
+│  │  ├─ hover-card.tsx
+│  │  ├─ input-otp.tsx
+│  │  ├─ input.tsx
+│  │  ├─ label.tsx
+│  │  ├─ menubar.tsx
+│  │  ├─ navigation-menu.tsx
+│  │  ├─ pagination.tsx
+│  │  ├─ popover.tsx
+│  │  ├─ progress.tsx
+│  │  ├─ radio-group.tsx
+│  │  ├─ resizable.tsx
+│  │  ├─ scroll-area.tsx
+│  │  ├─ select.tsx
+│  │  ├─ separator.tsx
+│  │  ├─ sheet.tsx
+│  │  ├─ sidebar.tsx
+│  │  ├─ skeleton.tsx
+│  │  ├─ slider.tsx
+│  │  ├─ sonner.tsx
+│  │  ├─ switch.tsx
+│  │  ├─ table.tsx
+│  │  ├─ tabs.tsx
+│  │  ├─ textarea.tsx
+│  │  ├─ toast.tsx
+│  │  ├─ toaster.tsx
+│  │  ├─ toggle-group.tsx
+│  │  ├─ toggle.tsx
+│  │  ├─ tooltip.tsx
+│  │  ├─ use-mobile.tsx
+│  │  └─ use-toast.ts
+│  └─ user-nav.tsx
+├─ components.json
+├─ hooks
+│  ├─ use-mobile.tsx
+│  ├─ use-performance.ts
+│  └─ use-toast.ts
+├─ lib
+│  ├─ offline-storage.ts
+│  ├─ performance-monitoring.ts
+│  └─ utils.ts
+├─ next.config.mjs
+├─ package.json
+├─ pnpm-lock.yaml
+├─ pnpm-workspace.yaml
+├─ postcss.config.mjs
+├─ public
+│  ├─ fonts
+│  │  ├─ ScheherazadeNew-Bold.ttf
+│  │  └─ ScheherazadeNew-Regular.ttf
+│  ├─ placeholder-logo.png
+│  ├─ placeholder-logo.svg
+│  ├─ placeholder-user.jpg
+│  ├─ placeholder.jpg
+│  └─ placeholder.svg
+├─ repomix-output.xml
+├─ styles
+│  └─ globals.css
+├─ tailwind.config.js
+└─ tsconfig.json
+
+```
+```
+quranic-arabic-trainer-2
+├─ .next
+│  ├─ cache
+│  │  ├─ .rscinfo
+│  │  ├─ swc
+│  │  │  └─ plugins
+│  │  │     └─ v7_macos_aarch64_8.0.0
+│  │  └─ webpack
+│  │     ├─ client-development
+│  │     │  ├─ 0.pack.gz
+│  │     │  ├─ 1.pack.gz
+│  │     │  ├─ 10.pack.gz
+│  │     │  ├─ 11.pack.gz
+│  │     │  ├─ 12.pack.gz
+│  │     │  ├─ 13.pack.gz
+│  │     │  ├─ 14.pack.gz
+│  │     │  ├─ 15.pack.gz
+│  │     │  ├─ 2.pack.gz
+│  │     │  ├─ 3.pack.gz
+│  │     │  ├─ 4.pack.gz
+│  │     │  ├─ 5.pack.gz
+│  │     │  ├─ 6.pack.gz
+│  │     │  ├─ 7.pack.gz
+│  │     │  ├─ 8.pack.gz
+│  │     │  ├─ 9.pack.gz
+│  │     │  ├─ index.pack.gz
+│  │     │  └─ index.pack.gz.old
+│  │     ├─ client-development-fallback
+│  │     │  ├─ 0.pack.gz
+│  │     │  └─ index.pack.gz.old
+│  │     ├─ server-development
+│  │     │  ├─ 0.pack.gz
+│  │     │  ├─ 1.pack.gz
+│  │     │  ├─ 10.pack.gz
+│  │     │  ├─ 11.pack.gz
+│  │     │  ├─ 12.pack.gz
+│  │     │  ├─ 2.pack.gz
+│  │     │  ├─ 3.pack.gz
+│  │     │  ├─ 4.pack.gz
+│  │     │  ├─ 5.pack.gz
+│  │     │  ├─ 6.pack.gz
+│  │     │  ├─ 7.pack.gz
+│  │     │  ├─ 8.pack.gz
+│  │     │  ├─ 9.pack.gz
+│  │     │  ├─ index.pack.gz
+│  │     │  └─ index.pack.gz.old
+│  │     └─ server-production
+│  │        ├─ 0.pack
+│  │        ├─ 1.pack
+│  │        ├─ 2.pack
+│  │        ├─ 3.pack
+│  │        ├─ index.pack
+│  │        └─ index.pack.old
+│  ├─ diagnostics
+│  │  ├─ build-diagnostics.json
+│  │  └─ framework.json
+│  ├─ package.json
+│  ├─ server
+│  │  ├─ app
+│  │  │  ├─ _not-found
+│  │  │  │  ├─ page.js
+│  │  │  │  └─ page.js.nft.json
+│  │  │  ├─ admin
+│  │  │  │  ├─ page.js
+│  │  │  │  └─ page.js.nft.json
+│  │  │  ├─ advanced-progression
+│  │  │  │  ├─ page.js
+│  │  │  │  └─ page.js.nft.json
+│  │  │  ├─ ai-feedback
+│  │  │  │  ├─ page.js
+│  │  │  │  └─ page.js.nft.json
+│  │  │  ├─ alphabet
+│  │  │  │  ├─ page.js
+│  │  │  │  └─ page.js.nft.json
+│  │  │  ├─ auth
+│  │  │  │  ├─ login
+│  │  │  │  │  ├─ page.js
+│  │  │  │  │  └─ page.js.nft.json
+│  │  │  │  └─ register
+│  │  │  │     ├─ page.js
+│  │  │  │     └─ page.js.nft.json
+│  │  │  ├─ community
+│  │  │  │  ├─ page.js
+│  │  │  │  └─ page.js.nft.json
+│  │  │  ├─ grammar
+│  │  │  │  ├─ page.js
+│  │  │  │  └─ page.js.nft.json
+│  │  │  ├─ kurser
+│  │  │  │  └─ [kursusId]
+│  │  │  │     └─ [fagId]
+│  │  │  │        └─ [emneId]
+│  │  │  │           ├─ page.js
+│  │  │  │           └─ page.js.nft.json
+│  │  │  ├─ learn
+│  │  │  │  └─ vocabulary
+│  │  │  │     ├─ page.js
+│  │  │  │     └─ page.js.nft.json
+│  │  │  ├─ manifest.webmanifest
+│  │  │  │  ├─ route.js
+│  │  │  │  └─ route.js.nft.json
+│  │  │  ├─ offline
+│  │  │  │  ├─ page.js
+│  │  │  │  └─ page.js.nft.json
+│  │  │  ├─ page.js
+│  │  │  ├─ page.js.nft.json
+│  │  │  ├─ performance
+│  │  │  │  ├─ page.js
+│  │  │  │  └─ page.js.nft.json
+│  │  │  ├─ practice
+│  │  │  │  └─ quiz
+│  │  │  │     ├─ page.js
+│  │  │  │     └─ page.js.nft.json
+│  │  │  ├─ profile
+│  │  │  │  ├─ page.js
+│  │  │  │  └─ page.js.nft.json
+│  │  │  ├─ pronunciation
+│  │  │  │  ├─ page.js
+│  │  │  │  └─ page.js.nft.json
+│  │  │  ├─ quiz
+│  │  │  │  ├─ page.js
+│  │  │  │  └─ page.js.nft.json
+│  │  │  ├─ quiz-system
+│  │  │  │  ├─ page.js
+│  │  │  │  └─ page.js.nft.json
+│  │  │  ├─ quran
+│  │  │  │  ├─ advanced-study
+│  │  │  │  │  ├─ page.js
+│  │  │  │  │  └─ page.js.nft.json
+│  │  │  │  ├─ page.js
+│  │  │  │  ├─ page.js.nft.json
+│  │  │  │  └─ study
+│  │  │  │     └─ [surahId]
+│  │  │  │        ├─ page.js
+│  │  │  │        └─ page.js.nft.json
+│  │  │  ├─ settings
+│  │  │  │  ├─ page.js
+│  │  │  │  └─ page.js.nft.json
+│  │  │  └─ vocabulary
+│  │  │     └─ flashcards
+│  │  │        ├─ page.js
+│  │  │        └─ page.js.nft.json
+│  │  ├─ app-paths-manifest.json
+│  │  ├─ chunks
+│  │  │  ├─ 150.js
+│  │  │  ├─ 157.js
+│  │  │  ├─ 211.js
+│  │  │  ├─ 25.js
+│  │  │  ├─ 281.js
+│  │  │  ├─ 34.js
+│  │  │  ├─ 363.js
+│  │  │  ├─ 390.js
+│  │  │  ├─ 472.js
+│  │  │  ├─ 478.js
+│  │  │  ├─ 520.js
+│  │  │  ├─ 543.js
+│  │  │  ├─ 634.js
+│  │  │  ├─ 661.js
+│  │  │  ├─ 721.js
+│  │  │  ├─ 888.js
+│  │  │  ├─ 91.js
+│  │  │  ├─ 930.js
+│  │  │  └─ 95.js
+│  │  ├─ pages
+│  │  │  ├─ _app.js
+│  │  │  ├─ _app.js.nft.json
+│  │  │  ├─ _document.js
+│  │  │  ├─ _document.js.nft.json
+│  │  │  ├─ _error.js
+│  │  │  └─ _error.js.nft.json
+│  │  ├─ pages-manifest.json
+│  │  ├─ server-reference-manifest.js
+│  │  ├─ server-reference-manifest.json
+│  │  └─ webpack-runtime.js
+│  ├─ trace
+│  └─ types
+│     ├─ app
+│     │  ├─ admin
+│     │  │  └─ page.ts
+│     │  ├─ advanced-progression
+│     │  │  └─ page.ts
+│     │  ├─ ai-feedback
+│     │  │  └─ page.ts
+│     │  ├─ alphabet
+│     │  │  └─ page.ts
+│     │  ├─ auth
+│     │  │  ├─ login
+│     │  │  │  └─ page.ts
+│     │  │  └─ register
+│     │  │     └─ page.ts
+│     │  ├─ community
+│     │  │  └─ page.ts
+│     │  ├─ grammar
+│     │  │  └─ page.ts
+│     │  ├─ kurser
+│     │  │  └─ [kursusId]
+│     │  │     └─ [fagId]
+│     │  │        └─ [emneId]
+│     │  │           └─ page.ts
+│     │  ├─ layout.ts
+│     │  ├─ learn
+│     │  │  └─ vocabulary
+│     │  │     └─ page.ts
+│     │  ├─ offline
+│     │  │  └─ page.ts
+│     │  ├─ page.ts
+│     │  ├─ performance
+│     │  │  └─ page.ts
+│     │  ├─ practice
+│     │  │  └─ quiz
+│     │  │     └─ page.ts
+│     │  ├─ profile
+│     │  │  └─ page.ts
+│     │  ├─ pronunciation
+│     │  │  └─ page.ts
+│     │  ├─ quiz
+│     │  │  └─ page.ts
+│     │  ├─ quiz-system
+│     │  │  └─ page.ts
+│     │  ├─ quran
+│     │  │  ├─ advanced-study
+│     │  │  │  └─ page.ts
+│     │  │  ├─ page.ts
+│     │  │  └─ study
+│     │  │     └─ [surahId]
+│     │  │        └─ page.ts
+│     │  ├─ settings
+│     │  │  └─ page.ts
+│     │  └─ vocabulary
+│     │     └─ flashcards
+│     │        └─ page.ts
+│     ├─ cache-life.d.ts
+│     └─ package.json
+├─ PROJEKT_ANALYSE.md
+├─ README.md
+├─ Struktur.txt
+├─ api_udviklingsplan.md
+├─ app
+│  ├─ admin
+│  │  └─ page.tsx
+│  ├─ advanced-progression
+│  │  └─ page.tsx
+│  ├─ ai-feedback
+│  │  └─ page.tsx
+│  ├─ alphabet
+│  │  └─ page.tsx
+│  ├─ auth
+│  │  ├─ login
+│  │  │  └─ page.tsx
+│  │  └─ register
+│  │     └─ page.tsx
+│  ├─ community
+│  │  ├─ loading.tsx
+│  │  └─ page.tsx
+│  ├─ globals.css
+│  ├─ grammar
+│  │  └─ page.tsx
+│  ├─ kurser
+│  │  └─ [kursusId]
+│  │     └─ [fagId]
+│  │        └─ [emneId]
+│  │           └─ page.tsx
+│  ├─ layout.tsx
+│  ├─ learn
+│  │  └─ vocabulary
+│  │     └─ page.tsx
+│  ├─ loading.tsx
+│  ├─ manifest.ts
+│  ├─ offline
+│  │  ├─ error.tsx
+│  │  ├─ loading.tsx
+│  │  └─ page.tsx
+│  ├─ page.tsx
+│  ├─ performance
+│  │  └─ page.tsx
+│  ├─ practice
+│  │  └─ quiz
+│  │     └─ page.tsx
+│  ├─ profile
+│  │  └─ page.tsx
+│  ├─ pronunciation
+│  │  └─ page.tsx
+│  ├─ quiz
+│  │  └─ page.tsx
+│  ├─ quiz-system
+│  │  └─ page.tsx
+│  ├─ quran
+│  │  ├─ advanced-study
+│  │  │  ├─ loading.tsx
+│  │  │  └─ page.tsx
+│  │  ├─ loading.tsx
+│  │  ├─ page.tsx
+│  │  └─ study
+│  │     └─ [surahId]
+│  │        ├─ error.tsx
+│  │        ├─ loading.tsx
+│  │        └─ page.tsx
+│  ├─ settings
+│  │  ├─ error.tsx
+│  │  ├─ loading.tsx
+│  │  └─ page.tsx
+│  ├─ sw.ts
+│  └─ vocabulary
+│     └─ flashcards
+│        └─ page.tsx
+├─ apps
+│  └─ api
+│     ├─ .prettierrc
+│     ├─ README.md
+│     ├─ dist
+│     │  ├─ app.controller.d.ts
+│     │  ├─ app.controller.js
+│     │  ├─ app.controller.js.map
+│     │  ├─ app.module.d.ts
+│     │  ├─ app.module.js
+│     │  ├─ app.module.js.map
+│     │  ├─ app.service.d.ts
+│     │  ├─ app.service.js
+│     │  ├─ app.service.js.map
+│     │  ├─ main.d.ts
+│     │  ├─ main.js
+│     │  ├─ main.js.map
+│     │  └─ modules
+│     │     ├─ auth
+│     │     │  ├─ auth.module.d.ts
+│     │     │  ├─ auth.module.js
+│     │     │  ├─ auth.module.js.map
+│     │     │  ├─ controllers
+│     │     │  │  └─ auth
+│     │     │  │     ├─ auth.controller.d.ts
+│     │     │  │     ├─ auth.controller.js
+│     │     │  │     └─ auth.controller.js.map
+│     │     │  ├─ dtos
+│     │     │  │  ├─ create-auth.dto.d.ts
+│     │     │  │  ├─ create-auth.dto.js
+│     │     │  │  ├─ create-auth.dto.js.map
+│     │     │  │  ├─ login-auth.dto.d.ts
+│     │     │  │  ├─ login-auth.dto.js
+│     │     │  │  └─ login-auth.dto.js.map
+│     │     │  └─ services
+│     │     │     └─ auth
+│     │     │        ├─ auth.service.d.ts
+│     │     │        ├─ auth.service.js
+│     │     │        └─ auth.service.js.map
+│     │     └─ prisma
+│     │        ├─ prisma.module.d.ts
+│     │        ├─ prisma.module.js
+│     │        ├─ prisma.module.js.map
+│     │        ├─ prisma.service.d.ts
+│     │        ├─ prisma.service.js
+│     │        └─ prisma.service.js.map
+│     ├─ eslint.config.mjs
+│     ├─ generated
+│     │  └─ prisma
+│     │     ├─ client.d.ts
+│     │     ├─ client.js
+│     │     ├─ default.d.ts
+│     │     ├─ default.js
+│     │     ├─ edge.d.ts
+│     │     ├─ edge.js
+│     │     ├─ index-browser.js
+│     │     ├─ index.d.ts
+│     │     ├─ index.js
+│     │     ├─ libquery_engine-darwin-arm64.dylib.node
+│     │     ├─ package.json
+│     │     ├─ runtime
+│     │     │  ├─ edge-esm.js
+│     │     │  ├─ edge.js
+│     │     │  ├─ index-browser.d.ts
+│     │     │  ├─ index-browser.js
+│     │     │  ├─ library.d.ts
+│     │     │  ├─ library.js
+│     │     │  ├─ react-native.js
+│     │     │  └─ wasm.js
+│     │     ├─ schema.prisma
+│     │     ├─ wasm.d.ts
+│     │     └─ wasm.js
+│     ├─ nest-cli.json
+│     ├─ package.json
+│     ├─ prisma
+│     │  ├─ dev.db
+│     │  ├─ dev.db-journal
+│     │  ├─ migrations
+│     │  │  ├─ 20250525050949_init_core_entities
+│     │  │  │  └─ migration.sql
+│     │  │  └─ migration_lock.toml
+│     │  └─ schema.prisma
+│     ├─ src
+│     │  ├─ app.controller.spec.ts
+│     │  ├─ app.controller.ts
+│     │  ├─ app.module.ts
+│     │  ├─ app.service.ts
+│     │  ├─ main.ts
+│     │  └─ modules
+│     │     ├─ auth
+│     │     │  ├─ auth.module.ts
+│     │     │  ├─ controllers
+│     │     │  │  └─ auth
+│     │     │  │     ├─ auth.controller.spec.ts
+│     │     │  │     └─ auth.controller.ts
+│     │     │  ├─ dtos
+│     │     │  │  ├─ create-auth.dto.ts
+│     │     │  │  └─ login-auth.dto.ts
+│     │     │  └─ services
+│     │     │     └─ auth
+│     │     │        ├─ auth.service.spec.ts
+│     │     │        └─ auth.service.ts
+│     │     └─ prisma
+│     │        ├─ prisma.module.ts
+│     │        └─ prisma.service.ts
+│     ├─ test
+│     │  ├─ app.e2e-spec.ts
+│     │  └─ jest-e2e.json
+│     ├─ tsconfig.build.json
+│     └─ tsconfig.json
+├─ components
+│  ├─ admin-analytics-chart.tsx
+│  ├─ admin-error-heatmap.tsx
+│  ├─ ai-explain-overlay.tsx
+│  ├─ ai-insight-card.tsx
+│  ├─ command-menu.tsx
+│  ├─ comparative-study-section.test.tsx
+│  ├─ comparative-study-section.tsx
+│  ├─ course-card.tsx
+│  ├─ flashcard-stats.tsx
+│  ├─ glassmorphism-header.tsx
+│  ├─ level-progress-ring.tsx
+│  ├─ main-nav.tsx
+│  ├─ notification-popup.tsx
+│  ├─ performance
+│  │  ├─ code-splitting-example.tsx
+│  │  ├─ lazy-loaded-component.tsx
+│  │  ├─ optimized-image.tsx
+│  │  ├─ performance-metrics.tsx
+│  │  └─ resource-monitor.tsx
+│  ├─ progress-ring.tsx
+│  ├─ progress.tsx
+│  ├─ quran-word-analysis.tsx
+│  ├─ recent-activity-card.tsx
+│  ├─ tafsir-section.test.tsx
+│  ├─ tafsir-section.tsx
+│  ├─ thematic-exploration-section.test.tsx
+│  ├─ thematic-exploration-section.tsx
+│  ├─ theme-provider.tsx
+│  ├─ topic-discussion-thread.tsx
+│  ├─ ui
+│  │  ├─ accordion.tsx
+│  │  ├─ alert-dialog.tsx
+│  │  ├─ alert.tsx
+│  │  ├─ aspect-ratio.tsx
+│  │  ├─ avatar.tsx
+│  │  ├─ badge.tsx
+│  │  ├─ breadcrumb.tsx
+│  │  ├─ button.tsx
+│  │  ├─ calendar.tsx
+│  │  ├─ card.tsx
+│  │  ├─ carousel.tsx
+│  │  ├─ chart.tsx
+│  │  ├─ checkbox.tsx
+│  │  ├─ collapsible.tsx
+│  │  ├─ command.tsx
+│  │  ├─ context-menu.tsx
+│  │  ├─ dialog.tsx
+│  │  ├─ drawer.tsx
+│  │  ├─ dropdown-menu.tsx
+│  │  ├─ form.tsx
+│  │  ├─ hover-card.tsx
+│  │  ├─ input-otp.tsx
+│  │  ├─ input.tsx
+│  │  ├─ label.tsx
+│  │  ├─ menubar.tsx
+│  │  ├─ navigation-menu.tsx
+│  │  ├─ pagination.tsx
+│  │  ├─ popover.tsx
+│  │  ├─ progress.tsx
+│  │  ├─ radio-group.tsx
+│  │  ├─ resizable.tsx
+│  │  ├─ scroll-area.tsx
+│  │  ├─ select.tsx
+│  │  ├─ separator.tsx
+│  │  ├─ sheet.tsx
+│  │  ├─ sidebar.tsx
+│  │  ├─ skeleton.tsx
+│  │  ├─ slider.tsx
+│  │  ├─ sonner.tsx
+│  │  ├─ switch.tsx
+│  │  ├─ table.tsx
+│  │  ├─ tabs.tsx
+│  │  ├─ textarea.tsx
+│  │  ├─ toast.tsx
+│  │  ├─ toaster.tsx
+│  │  ├─ toggle-group.tsx
+│  │  ├─ toggle.tsx
+│  │  ├─ tooltip.tsx
+│  │  ├─ use-mobile.tsx
+│  │  └─ use-toast.ts
+│  └─ user-nav.tsx
+├─ components.json
+├─ fejl.txt
+├─ guidelines.md
+├─ hooks
+│  ├─ use-mobile.tsx
+│  ├─ use-performance.ts
+│  └─ use-toast.ts
+├─ lib
+│  ├─ offline-storage.ts
+│  ├─ performance-monitoring.ts
+│  └─ utils.ts
+├─ next.config.mjs
+├─ overblik.txt
+├─ package.json
+├─ pnpm-lock.yaml
+├─ pnpm-workspace.yaml
+├─ postcss.config.mjs
+├─ public
+│  ├─ fonts
+│  │  ├─ ScheherazadeNew-Bold.ttf
+│  │  └─ ScheherazadeNew-Regular.ttf
+│  ├─ placeholder-logo.png
+│  ├─ placeholder-logo.svg
+│  ├─ placeholder-user.jpg
+│  ├─ placeholder.jpg
+│  └─ placeholder.svg
+├─ repomix-output.xml
+├─ stackinfo.txt
+├─ styles
+│  └─ globals.css
+├─ tailwind.config.js
+└─ tsconfig.json
+
+```
