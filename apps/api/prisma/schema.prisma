@@ -26,6 +26,10 @@ model User {
   updatedAt DateTime @updatedAt
   lessons   Lesson[]
   quizzes   Quiz[]
+  settings  Settings?
+  progress  Progress[]
+  flashcards Flashcard[]
+  pronunciations Pronunciation[]
 }
 
 model Word {
@@ -67,6 +71,53 @@ model Quiz {
   lesson    Lesson   @relation(fields: [lessonId], references: [id])
   userId    Int
   user      User     @relation(fields: [userId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Flashcard {
+  id        Int      @id @default(autoincrement())
+  front     String
+  back      String
+  userId    Int
+  user      User     @relation(fields: [userId], references: [id])
+  stats     Json?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Grammar {
+  id        Int      @id @default(autoincrement())
+  rule      String
+  example   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Pronunciation {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  user      User     @relation(fields: [userId], references: [id])
+  audioUrl  String
+  feedback  String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Progress {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  user      User     @relation(fields: [userId], references: [id])
+  data      Json
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Settings {
+  id        Int      @id @default(autoincrement())
+  userId    Int      @unique
+  user      User     @relation(fields: [userId], references: [id])
+  preferences Json
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }

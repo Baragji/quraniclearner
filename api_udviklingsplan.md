@@ -1,5 +1,38 @@
 # Flerfaset Udviklingsplan for Quranic Arabic Trainer API
 
+> **Statusoversigt (maj 2024):**
+>
+> **Færdige moduler:**
+> - WordsModule (CRUD, validering, Swagger, Prisma)
+> - VerseModule (CRUD, validering, Swagger, Prisma)
+> - LessonModule (CRUD, progression, Swagger, Prisma)
+> - QuizModule (CRUD, quizlogik, scoring, Swagger, Prisma)
+>
+> **Mangler:**
+> - UserModule (CRUD, profil, indstillinger)
+> - FlashcardModule (CRUD, spaced repetition, statistik)
+> - GrammarModule (CRUD, grammatiske regler, eksempler)
+> - PronunciationModule (CRUD, lydfiler, feedback)
+> - ProgressModule (CRUD, tracking, rapportering)
+> - SettingsModule (CRUD, brugerpræferencer)
+>
+> **Frontend:**
+> - Sider for flere moduler findes, men integration og UI/UX optimering mangler for nye features.
+>
+> **Test & Deployment:**
+> - Testning påbegyndt, men ikke komplet. CI/CD og deployment mangler.
+>
+> **Dokumentation:**
+> - Swagger delvist opsat. Øvrig dokumentation og vedligehold mangler.
+>
+> **Næste skridt (prioriteret):**
+> 1. Implementér manglende backend-moduler (User, Flashcard, Grammar, Pronunciation, Progress, Settings)
+> 2. Udvid frontend med sider og integration for de nye moduler
+> 3. Implementér AI-feedback og adaptiv progression
+> 4. Forbedr testdækning og optimer performance
+> 5. Opsæt CI/CD og deployment
+> 6. Færdiggør dokumentation og brugervejledninger
+
 Dette dokument beskriver en detaljeret, flerfaset plan for udviklingen af REST API'en til Quranic Arabic Trainer platformen. Planen tager udgangspunkt i den specificerede monorepo-struktur med NestJS, Prisma og PostgreSQL.
 
 **Vigtigt:** Konsulter altid `stackinfo.txt` og `guidelines.md` (hvis de findes i projektet) for specifikke konfigurationer og retningslinjer.
